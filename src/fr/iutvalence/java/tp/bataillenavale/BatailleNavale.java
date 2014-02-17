@@ -1,3 +1,4 @@
+package fr.iutvalence.java.tp.bataillenavale;
 /**
  * Représente une partie de Bataille Navale.
  */
