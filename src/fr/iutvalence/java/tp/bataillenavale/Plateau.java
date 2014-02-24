@@ -1,10 +1,22 @@
 package fr.iutvalence.java.tp.bataillenavale;
 
 /**
- * Grille de jeu comportant deux grilles identiques (une pour chaque joueur),
+ * Plateau de jeu comportant deux grilles identiques (une pour chaque joueur),
  * cachées du joueur adverse par un cache placé au milieu.
  */
 
 public class Plateau {
 
+	/**
+	 * Grille de jeu du joueur 1, où il va placer ses bateaux.
+	 * Le joueur 2 va tirer sur cette grille, mais ne pourra pas la voir.
+	 */
+	private Grille grilleJoueur1;
+	
+	/**
+	 * Grille de jeu du joueur 2, où il va placer ses bateaux.
+	 * Le joueur 1 va tirer sur cette grille, mais ne pourra pas la voir.
+	 */
+	private Grille grilleJoueur2;
+	
 }
