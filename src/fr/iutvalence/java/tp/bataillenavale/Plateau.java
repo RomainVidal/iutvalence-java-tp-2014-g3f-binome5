@@ -22,6 +22,7 @@ public class Plateau {
 	private Case[][] cases;
 
 	public Plateau() {
+		cases = new Case[NOMBRE_DE_CASES_X][NOMBRE_DE_CASES_Y];
 		for (int i = 0; i < NOMBRE_DE_CASES_X; i++) {
 			for (int j = 0; j < NOMBRE_DE_CASES_Y; j++)
 				cases[i][j] = new Case(i + 1, j + 1);
