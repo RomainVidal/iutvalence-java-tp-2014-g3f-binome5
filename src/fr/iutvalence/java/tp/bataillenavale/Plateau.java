@@ -19,4 +19,14 @@ public class Plateau {
 	 */
 	private Grille grilleJoueur2;
 	
+	/**
+	 * Le plateau de jeu est initialisé avec deux grilles (une par joueur) où les joueurs
+	 * placerons leurs bateaux.
+	 */
+	public Plateau()
+	{
+		this.grilleJoueur1 = new Grille();
+		this.grilleJoueur2 = new Grille();
+	}
+	
 }
