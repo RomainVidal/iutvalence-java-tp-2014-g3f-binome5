@@ -1,20 +1,22 @@
 import fr.iutvalence.java.tp.bataillenavale.BatailleNavale;
 
+// TODO Ã©crire un commentaire
+public class LanceurDeBatailleNavale
+{
+	// TODO Ã©crire un commentaire
+	// TODO corriger les accents
+	public static void main(String[] args)
+	{
 
+		System.out.println("Crï¿½ation d'une partie de Bataille Navale");
 
-public class LanceurDeBatailleNavale {
-
-	public static void main(String[] args) {
-		
-		System.out.println("Création d'une partie de Bataille Navale");
-		
 		BatailleNavale partieBatailleNavale = new BatailleNavale();
-		
-		System.out.println("Démarrage de la partie");
-		
+
+		System.out.println("Dï¿½marrage de la partie");
+
 		partieBatailleNavale.jouer();
-		
-		System.out.println("Fin de la partie");	
+
+		System.out.println("Fin de la partie");
 
 	}
 

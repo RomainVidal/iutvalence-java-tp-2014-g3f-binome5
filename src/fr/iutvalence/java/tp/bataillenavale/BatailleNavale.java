@@ -1,30 +1,35 @@
 package fr.iutvalence.java.tp.bataillenavale;
 
+//TODO corriger le commentaire
 /**
- * Représente une partie de Bataille Navale.
+ * Reprï¿½sente une partie de Bataille Navale.
  */
-public class BatailleNavale {
+public class BatailleNavale
+{
 
+	// TODO Ã©crire un commentaire plus prÃ©cis
 	/**
-	 * Defini un plateau de jeu. 
+	 * Defini un plateau de jeu.
 	 */
 	private Plateau plateau;
 
+	// TODO Ã©crire un commentaire plus prÃ©cis, sans parler de l'implÃ©mentation
 	/**
-	 * Créé et renvoie une nouvelle partie de bataille navale.
-	 * Instanciation de la grille de jeu et des bateaux à placer.
+	 * Crï¿½ï¿½ et renvoie une nouvelle partie de bataille navale. Instanciation de
+	 * la grille de jeu et des bateaux ï¿½ placer.
 	 */
 	public BatailleNavale()
 	{
 		this.plateau = new Plateau();
 	}
-	
+
+	// TODO Ã©crire un commentaire plus prÃ©cis
 	/**
-	 * permet de jouer une partie de  Bataille Navale.
+	 * permet de jouer une partie de Bataille Navale.
 	 */
-	public void jouer() {
-		
-		
+	public void jouer()
+	{
+
 	}
 
 }
