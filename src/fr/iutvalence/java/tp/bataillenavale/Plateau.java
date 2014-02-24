@@ -1,12 +1,9 @@
 package fr.iutvalence.java.tp.bataillenavale;
 
-
-// TODO compléter le commentaire
 /**
- * @author vidalr
- * 
+ * Plateau de jeu comportant deux grilles identiques (une pour chaque joueur),
+ * cachées du joueur adverse par un cache placé au milieu.
  */
-public class Plateau
-{
+public class Plateau {
 
 }

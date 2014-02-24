@@ -1,18 +1,23 @@
 import fr.iutvalence.java.tp.bataillenavale.BatailleNavale;
 
-// TODO écrire un commentaire
-public class LanceurDeBatailleNavale
-{
-	// TODO écrire un commentaire
-	// TODO corriger les accents
-	public static void main(String[] args)
-	{
+/**
+ * Ceci est une application permettant de lancer et de jouer une partie de
+ * bataille navale. De plus celle-ci affiche des commentaires à la création,
+ * au démarrage et à la fin de la partie.
+ */
+public class LanceurDeBatailleNavale {
 
-		System.out.println("Cr�ation d'une partie de Bataille Navale");
+	/**
+	 * Point d'entrée de l'application.
+	 * @param args paramètres de la ligne de commandes (on ne les utilise pas)
+	 */
+	public static void main(String[] args) {
+
+		System.out.println("Création d'une partie de Bataille Navale");
 
 		BatailleNavale partieBatailleNavale = new BatailleNavale();
 
-		System.out.println("D�marrage de la partie");
+		System.out.println("Démarrage de la partie");
 
 		partieBatailleNavale.jouer();
 
