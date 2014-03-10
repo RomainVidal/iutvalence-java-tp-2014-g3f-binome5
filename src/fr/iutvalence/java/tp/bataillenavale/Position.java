@@ -35,4 +35,19 @@ public class Position {
 	public int getY() {
 		return y;
 	}
+
+	//TODO A finir.
+	public Position voisine(Orientation orientation) {
+		
+		if (positionTir.getX() == this.positionProue.getX())
+		{
+			if (positionTir.getY() <= this.positionProue.getY()+this.taille &&  positionTir.getY() > this.positionProue.getY());
+		}
+			
+		if (positionTir.getY() == this.positionProue.getY())
+		{
+			if (positionTir.getX() <= this.positionProue.getX()+this.taille &&  positionTir.getX() > this.positionProue.getX());
+		}		
+		return null;
+	}
 }

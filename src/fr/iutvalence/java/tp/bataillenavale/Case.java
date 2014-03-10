@@ -1,5 +1,7 @@
 package fr.iutvalence.java.tp.bataillenavale;
 
+// TODO Changer le type des coordonnées par un type Position.
+
 /**
  * Case de la grille représentée par ses deux coordonnées x et y.
  *

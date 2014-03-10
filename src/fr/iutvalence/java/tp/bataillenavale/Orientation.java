@@ -9,11 +9,11 @@ public enum Orientation {
 	/**
 	 * Le bateau est placé horizontalement.
 	 */
-	Horizontal,
+	HORIZONTAL,
 	
 	/**
 	 * Le bateau est placé verticalement.
 	 */
-	Vertical;
+	VERTICAL;
 	
 }
