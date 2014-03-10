@@ -23,6 +23,9 @@ public class Grille {
 	 */
 	private Case[][] cases;
 
+	/**
+	 * Grille de jeu initialisée en tant que carré de 10*10 cases vides.
+	 */
 	public Grille() {
 		cases = new Case[NOMBRE_DE_CASES_X][NOMBRE_DE_CASES_Y];
 		for (int i = 0; i < NOMBRE_DE_CASES_X; i++) {

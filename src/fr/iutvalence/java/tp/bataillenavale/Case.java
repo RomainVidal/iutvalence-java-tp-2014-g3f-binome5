@@ -1,5 +1,9 @@
 package fr.iutvalence.java.tp.bataillenavale;
 
+/**
+ * Case de la grille représentée par ses deux coordonnées x et y.
+ *
+ */
 public class Case {
 
 	/**
@@ -16,6 +20,8 @@ public class Case {
 	
 	/**
 	 * Définition d'une case selon ses coordonnées.
+	 * @param x 
+	 * @param y 
 	 */
 	public Case(int x, int y) {
 		this.coordonneeX = x;
