@@ -10,7 +10,7 @@ public abstract class Bateau {
 	/**
 	 * Taille du bateau (nombre de cases qu'il occupe sur la grille).
 	 */
-	private int taille;
+	private Longueur taille;
 	
 	/**
 	 * Orientation du bateau.
