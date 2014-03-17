@@ -53,8 +53,10 @@ public class Bateau {
 	 *            Position de la case visée par le tir.
 	 * @return Vrai si un bateau se trouve à la position ciblée et faux si il
 	 *         n'y en a pas.
+	 * @throws ExceptionCoordonneesNonValides
 	 */
-	public boolean estTouche(Position positionTir) {
+	public boolean estTouche(Position positionTir)
+			throws ExceptionCoordonneesNonValides {
 
 		Position positionCourante = this.positionProue;
 		int indicePosition = 1;
