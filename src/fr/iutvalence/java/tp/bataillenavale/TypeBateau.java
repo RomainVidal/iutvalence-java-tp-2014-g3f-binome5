@@ -1,5 +1,11 @@
 package fr.iutvalence.java.tp.bataillenavale;
 
+/**
+ * Type du bateau, défini par un nom et une taille.
+ * 
+ * @author brunetj
+ * 
+ */
 public enum TypeBateau {
 	/**
 	 * Bateau d'une longueur de 2 cases.
