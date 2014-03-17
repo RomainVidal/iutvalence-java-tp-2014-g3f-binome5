@@ -4,8 +4,7 @@ package fr.iutvalence.java.tp.bataillenavale;
  * Une position sur la grille, définie par les coordonnées x et y.
  * 
  */
-public class Position
-{
+public class Position {
 
 	private int x;
 	private int y;
@@ -17,8 +16,7 @@ public class Position
 	 * 
 	 *             Créé un pointeur vers une position de case dans la grille.
 	 */
-	public Position(int X, int Y) throws ExceptionCoordonneesNonValides
-	{
+	public Position(int X, int Y) throws ExceptionCoordonneesNonValides {
 		if (x < 0 || x > 10 || y < 0 || y > 10)
 			throw new ExceptionCoordonneesNonValides();
 
@@ -29,36 +27,39 @@ public class Position
 	/**
 	 * @return la valeur de la coordonnée x de la position.
 	 */
-	public int getX()
-	{
+	public int getX() {
 		return x;
 	}
 
 	/**
 	 * @return la valeur de la coordonnée y de la position.
 	 */
-	public int getY()
-	{
+	public int getY() {
 		return y;
 	}
 
-	// TODO A finir.
+	/**
+	 * On recherche la position de la case voisine de la case courante en
+	 * fonction de l'orientation du bateau.
+	 * 
+	 * @param orientation
+	 *            Bateau orienté verticalement ou horizontalement.
+	 * @return Position voisine de la position courante.
+	 * @throws ExceptionCoordonneesNonValides
+	 */
+
 	public Position voisine(Orientation orientation)
-	{
+			throws ExceptionCoordonneesNonValides {
+		Position positionVoisine = new Position(this.x, this.y);
 
-		if (positionTir.getX() == this.positionProue.getX())
-		{
-			if (positionTir.getY() <= this.positionProue.getY() + this.taille
-					&& positionTir.getY() > this.positionProue.getY())
-				;
+		if (orientation == Orientation.HORIZONTAL) {
+			positionVoisine.y += 1;
 		}
 
-		if (positionTir.getY() == this.positionProue.getY())
-		{
-			if (positionTir.getX() <= this.positionProue.getX() + this.taille
-					&& positionTir.getX() > this.positionProue.getX())
-				;
+		if (orientation == Orientation.VERTICAL) {
+			positionVoisine.x += 1;
 		}
-		return null;
+
+		return positionVoisine;
 	}
 }
