@@ -14,11 +14,11 @@ public class Case {
 	/**
 	 * Définition d'une case selon ses coordonnées.
 	 * 
-	 * @param pos
+	 * @param position
 	 *            Coordonnées de la case.
 	 */
-	public Case(Position pos) {
-		this.coordonnees = pos;
+	public Case(Position position) {
+		this.coordonnees = position;
 	}
 
 }

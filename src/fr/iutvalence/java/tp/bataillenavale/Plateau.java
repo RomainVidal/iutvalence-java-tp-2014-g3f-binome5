@@ -4,8 +4,7 @@ package fr.iutvalence.java.tp.bataillenavale;
  * Plateau de jeu comportant deux grilles identiques (une pour chaque joueur),
  * cachées du joueur adverse par un cache placé au milieu.
  */
-public class Plateau
-{
+public class Plateau {
 
 	/**
 	 * Grille de jeu du joueur 1, où il va placer ses bateaux. Le joueur 2 va
@@ -22,11 +21,17 @@ public class Plateau
 	/**
 	 * Le plateau de jeu est initialisé avec deux grilles (une par joueur) où
 	 * les joueurs placerons leurs bateaux.
+	 * 
+	 * @throws ExceptionCoordonneesNonValides
 	 */
-	public Plateau()
-	{
-		this.grilleJoueur1 = new Grille();
-		this.grilleJoueur2 = new Grille();
+	public Plateau() {
+		try {
+			this.grilleJoueur1 = new Grille();
+			this.grilleJoueur2 = new Grille();
+		} catch (ExceptionCoordonneesNonValides e) {
+			e.printStackTrace();
+		}
+
 	}
 
 }
