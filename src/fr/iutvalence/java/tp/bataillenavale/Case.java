@@ -1,36 +1,30 @@
 package fr.iutvalence.java.tp.bataillenavale;
 
-// TODO Changer le type des coordonnées par un type Position.
-
 /**
  * Case de la grille représentée par ses deux coordonnées x et y.
  * 
  */
-public class Case
-{
+public class Case {
 
 	/**
-	 * Coordonnée X, verticale, de la case. Correspond a la ligne de la case.
+	 * Position de la case sur la grille.
 	 */
-	private int coordonneeX;
+	private Position coordonnees;
 
-	/**
-	 * Coordonnée Y, horizontale, de la case. Correspond à la colonne de la
-	 * case.
-	 */
-	private int coordonneeY;
-
-	// TODO écrire un commentaire complet
 	/**
 	 * Définition d'une case selon ses coordonnées.
 	 * 
 	 * @param x
+	 *            Coordonnée verticale.
 	 * @param y
+	 *            Coordonnée horizontale.
 	 */
-	public Case(int x, int y)
-	{
-		this.coordonneeX = x;
-		this.coordonneeY = y;
+	public Case(int x, int y) {
+		try {
+			this.coordonnees = new Position(x, y);
+		} catch (ExceptionCoordonneesNonValides e) {
+			e.printStackTrace();
+		}
 	}
 
 }
