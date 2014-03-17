@@ -4,30 +4,33 @@ package fr.iutvalence.java.tp.bataillenavale;
 
 /**
  * Case de la grille représentée par ses deux coordonnées x et y.
- *
+ * 
  */
-public class Case {
+public class Case
+{
 
 	/**
-	 * Coordonnée X, verticale, de la case.
-	 * Correspond a la ligne de la case.
+	 * Coordonnée X, verticale, de la case. Correspond a la ligne de la case.
 	 */
 	private int coordonneeX;
-	
+
 	/**
-	 * Coordonnée Y, horizontale, de la case.
-	 * Correspond à la colonne de la case.
+	 * Coordonnée Y, horizontale, de la case. Correspond à la colonne de la
+	 * case.
 	 */
 	private int coordonneeY;
-	
+
+	// TODO écrire un commentaire complet
 	/**
 	 * Définition d'une case selon ses coordonnées.
-	 * @param x 
-	 * @param y 
+	 * 
+	 * @param x
+	 * @param y
 	 */
-	public Case(int x, int y) {
+	public Case(int x, int y)
+	{
 		this.coordonneeX = x;
 		this.coordonneeY = y;
 	}
-	
+
 }

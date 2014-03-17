@@ -1,7 +1,8 @@
 package fr.iutvalence.java.tp.bataillenavale;
 
 //TODO Mettre en majuscule.
-public enum TypeBateau {
+public enum TypeBateau
+{
 	/**
 	 * Bateau d'une longueur de 2 cases.
 	 */
@@ -29,7 +30,8 @@ public enum TypeBateau {
 
 	private int taille;
 
-	private TypeBateau(int taille) {
+	private TypeBateau(int taille)
+	{
 
 		this.taille = taille;
 	}
@@ -37,7 +39,8 @@ public enum TypeBateau {
 	/**
 	 * @return la longueur du bateau.
 	 */
-	public int getTaille() {
+	public int getTaille()
+	{
 		return taille;
 	}
 

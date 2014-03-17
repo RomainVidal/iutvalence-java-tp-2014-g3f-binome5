@@ -5,6 +5,7 @@ package fr.iutvalence.java.tp.bataillenavale;
  * la grille.
  * 
  */
-public class ExceptionCoordonneesNonValides extends Exception {
+public class ExceptionCoordonneesNonValides extends Exception
+{
 
 }
