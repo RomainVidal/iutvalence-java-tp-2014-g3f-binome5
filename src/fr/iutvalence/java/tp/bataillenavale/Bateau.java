@@ -11,6 +11,7 @@ public class Bateau {
 	 */
 	private int taille;
 
+	private int caseRestante;
 	/**
 	 * Orientation du bateau.
 	 */
@@ -40,6 +41,7 @@ public class Bateau {
 	public Bateau(TypeBateau type, Position positionProue,
 			Orientation orientation) {
 		this.type = type;
+		this.caseRestante = this.type.getTaille();
 		this.positionProue = positionProue;
 		this.orientation = orientation;
 		this.taille = this.type.getTaille();
@@ -62,17 +64,33 @@ public class Bateau {
 		int indicePosition = 1;
 
 		while (true) {
-			if (positionCourante == positionTir)
+			if (positionCourante == positionTir) {
+				this.caseRestante--;
 				return true;
+			}
 			if (indicePosition == this.taille)
 				break;
 			positionCourante = positionCourante.voisine(this.orientation);
 			indicePosition++;
 
 		}
-		if (positionTir == this.positionProue)
+		if (positionTir == this.positionProue) {
+			this.caseRestante--;
 			return true;
+		}
 		return false;
 
+	}
+
+	/**
+	 * On test si le nombre de cases non touchées est égal à 0, et si c'est le
+	 * cas, le bateau est coulé.
+	 * 
+	 * @return Vrai si le bateau est coulé, faux dans le cas contraire.
+	 */
+	public boolean estCoule() {
+		if (this.caseRestante == 0)
+			return true;
+		return false;
 	}
 }
