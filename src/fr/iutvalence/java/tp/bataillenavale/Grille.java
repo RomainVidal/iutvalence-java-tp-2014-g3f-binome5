@@ -30,10 +30,10 @@ public class Grille
 	public Grille()
 	{
 		cases = new Case[NOMBRE_DE_CASES_X][NOMBRE_DE_CASES_Y];
-		for (int i = 0; i < NOMBRE_DE_CASES_X; i++)
+		for (int coordoneex = 0; coordoneex < NOMBRE_DE_CASES_X; coordoneex++)
 		{
-			for (int j = 0; j < NOMBRE_DE_CASES_Y; j++)
-				cases[i][j] = new Case(i + 1, j + 1);
+			for (int coordoneey = 0; coordoneey < NOMBRE_DE_CASES_Y; coordoneey++)
+				cases[coordoneex][coordoneey] = new Case(coordoneex + 1, coordoneey + 1);
 		}
 	}
 }
