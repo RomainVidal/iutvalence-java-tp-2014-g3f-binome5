@@ -21,8 +21,6 @@ public class Plateau {
 	/**
 	 * Le plateau de jeu est initialisé avec deux grilles (une par joueur) où
 	 * les joueurs placerons leurs bateaux.
-	 * 
-	 * @throws ExceptionCoordonneesNonValides
 	 */
 	public Plateau() {
 		try {
