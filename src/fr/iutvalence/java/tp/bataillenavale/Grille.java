@@ -5,14 +5,13 @@ package fr.iutvalence.java.tp.bataillenavale;
  * laquelle seront placés les bateaux. En outre chaque joueur possède sa propre
  * grille non visible par le joueur adverse.
  */
-public class Grille
-{
+public class Grille {
 
 	/**
 	 * Constante représentant le nombre de lignes d'une grille.
 	 */
 	private static final int NOMBRE_DE_CASES_X = 10;
-	
+
 	/**
 	 * Constante représentant le nombre de colonnes d'une grille.
 	 */
@@ -26,14 +25,16 @@ public class Grille
 
 	/**
 	 * Grille de jeu initialisée en tant que carré de 10*10 cases vides.
+	 * @throws ExceptionCoordonneesNonValides 
 	 */
-	public Grille()
-	{
+	public Grille() throws ExceptionCoordonneesNonValides {
+		Position positionCourante;
 		cases = new Case[NOMBRE_DE_CASES_X][NOMBRE_DE_CASES_Y];
-		for (int coordoneex = 0; coordoneex < NOMBRE_DE_CASES_X; coordoneex++)
-		{
-			for (int coordoneey = 0; coordoneey < NOMBRE_DE_CASES_Y; coordoneey++)
-				cases[coordoneex][coordoneey] = new Case(coordoneex + 1, coordoneey + 1);
+		for (int coordoneex = 0; coordoneex < NOMBRE_DE_CASES_X; coordoneex++) {
+			for (int coordoneey = 0; coordoneey < NOMBRE_DE_CASES_Y; coordoneey++) {
+				positionCourante = new Position(coordoneex, coordoneey);
+				cases[coordoneex][coordoneey] = new Case(positionCourante);
+			}
 		}
 	}
 }

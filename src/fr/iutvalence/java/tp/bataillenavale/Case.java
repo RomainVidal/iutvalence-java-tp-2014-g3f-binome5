@@ -14,17 +14,11 @@ public class Case {
 	/**
 	 * Définition d'une case selon ses coordonnées.
 	 * 
-	 * @param x
-	 *            Coordonnée verticale.
-	 * @param y
-	 *            Coordonnée horizontale.
+	 * @param pos
+	 *            Coordonnées de la case.
 	 */
-	public Case(int x, int y) {
-		try {
-			this.coordonnees = new Position(x, y);
-		} catch (ExceptionCoordonneesNonValides e) {
-			e.printStackTrace();
-		}
+	public Case(Position pos) {
+		this.coordonnees = pos;
 	}
 
 }
