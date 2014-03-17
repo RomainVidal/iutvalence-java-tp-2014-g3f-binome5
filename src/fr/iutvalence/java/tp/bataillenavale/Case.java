@@ -11,6 +11,8 @@ public class Case {
 	 */
 	private Position coordonnees;
 
+	private boolean caseDejaCiblee;
+
 	/**
 	 * Définition d'une case selon ses coordonnées.
 	 * 
@@ -19,6 +21,18 @@ public class Case {
 	 */
 	public Case(Position position) {
 		this.coordonnees = position;
+		this.caseDejaCiblee = false;
+	}
+
+	/**
+	 * Indique siil est possible de tirer sur la case visée.
+	 * 
+	 * @return Vrai si la case n'a jamais été ciblée, faux sinon.
+	 */
+	public boolean peutEtreVisee() {
+		if (this.caseDejaCiblee == true)
+			return false;
+		return true;
 	}
 
 }
