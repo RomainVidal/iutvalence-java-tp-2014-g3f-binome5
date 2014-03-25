@@ -29,14 +29,12 @@ public class LanceurDeBatailleNavale {
 			position = new Position(7,2);
 			grille.tirer(position);
 		} catch (ExceptionCoordonneesNonValides e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		try {
 			position = new Position(5, 2);
 			partieBatailleNavale.plateau.joueur1.placerBateau(TypeBateau.CROISEUR ,position ,Orientation.HORIZONTAL);
 		} catch (ExceptionCoordonneesNonValides e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
