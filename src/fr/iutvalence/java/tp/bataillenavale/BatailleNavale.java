@@ -10,7 +10,7 @@ public class BatailleNavale
 	 * Plateau de jeu comportant deux grilles identiques (une pour chaque
 	 * joueur), cachées du joueur adverse par un cache placé au milieu.
 	 */
-	private Plateau plateau;
+	public Plateau plateau;
 
 	/**
 	 * Créé et renvoie une nouvelle partie de bataille navale. Création du

@@ -11,7 +11,10 @@ public class Bateau {
 	 */
 	private int taille;
 
+	private boolean[] positionsTouchees;
+
 	private int caseRestante;
+
 	/**
 	 * Orientation du bateau.
 	 */
@@ -60,25 +63,26 @@ public class Bateau {
 	public boolean estTouche(Position positionTir)
 			throws ExceptionCoordonneesNonValides {
 
+		for (int numeroPosition = 0; numeroPosition < this.taille; numeroPosition++)
+			if (this.obtenirPosition(numeroPosition).equals(positionTir))
+				return true;
+		return false;
+	}
+
+	private Position obtenirPosition(int numeroPosition) {
+
 		Position positionCourante = this.positionProue;
 		int indicePosition = 1;
-
-		while (true) {
-			if (positionCourante == positionTir) {
-				this.caseRestante--;
-				return true;
-			}
-			if (indicePosition == this.taille)
-				break;
+		try {
 			positionCourante = positionCourante.voisine(this.orientation);
-			indicePosition++;
 
+		} catch (ExceptionCoordonneesNonValides e) {
+			e.printStackTrace();
 		}
-		if (positionTir == this.positionProue) {
-			this.caseRestante--;
-			return true;
-		}
-		return false;
+		
+		indicePosition++;
+		
+		return positionCourante;
 
 	}
 
@@ -89,8 +93,9 @@ public class Bateau {
 	 * @return Vrai si le bateau est coulé, faux dans le cas contraire.
 	 */
 	public boolean estCoule() {
-		if (this.caseRestante == 0)
-			return true;
-		return false;
+		for (int numeroPosition = 0; numeroPosition < this.taille; numeroPosition++)
+			if (!(this.positionsTouchees[numeroPosition]))
+				return false;
+		return true;
 	}
 }

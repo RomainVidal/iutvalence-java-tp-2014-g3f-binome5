@@ -32,7 +32,19 @@ public class Case {
 	public boolean peutEtreVisee() {
 		if (this.caseDejaCiblee == true)
 			return false;
+		this.caseDejaCiblee = true;
 		return true;
 	}
 
+	public String toString(){
+		if (this.caseDejaCiblee) {
+			return "x";
+		}
+		for (int ligne = 0; ligne < Grille.NOMBRE_DE_CASES_X; ligne++){
+			for (int colonne = 0; colonne < Grille.NOMBRE_DE_CASES_Y; colonne ++){
+				
+			}
+		}
+		return "o";
+	}
 }

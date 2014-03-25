@@ -7,28 +7,22 @@ package fr.iutvalence.java.tp.bataillenavale;
 public class Plateau {
 
 	/**
-	 * Grille de jeu du joueur 1, où il va placer ses bateaux. Le joueur 2 va
-	 * tirer sur cette grille, mais ne pourra pas la voir.
+	 * Joueur 1 il posséde une grille et des bateaux.
 	 */
-	private Grille grilleJoueur1;
+	public Joueur joueur1;
 
 	/**
-	 * Grille de jeu du joueur 2, où il va placer ses bateaux. Le joueur 1 va
-	 * tirer sur cette grille, mais ne pourra pas la voir.
+	 * Joueur 2 il posséde une grille et des bateaux.
 	 */
-	private Grille grilleJoueur2;
+	public Joueur joueur2;
 
 	/**
 	 * Le plateau de jeu est initialisé avec deux grilles (une par joueur) où
 	 * les joueurs placerons leurs bateaux.
 	 */
 	public Plateau() {
-		try {
-			this.grilleJoueur1 = new Grille();
-			this.grilleJoueur2 = new Grille();
-		} catch (ExceptionCoordonneesNonValides e) {
-			e.printStackTrace();
-		}
+			this.joueur1 = new Joueur();
+			this.joueur2 = new Joueur();
 
 	}
 
