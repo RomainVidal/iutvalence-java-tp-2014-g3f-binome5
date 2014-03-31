@@ -32,8 +32,14 @@ public enum TypeBateau {
 	 */
 	PORTEAVION(5);
 
+	/**
+	 * Nombre de cases que le bateau occupe sur la grille.
+	 */
 	private int taille;
 
+	/**
+	 * @param taille
+	 */
 	private TypeBateau(int taille) {
 
 		this.taille = taille;
