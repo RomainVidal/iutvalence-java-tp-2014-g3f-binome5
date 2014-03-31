@@ -41,6 +41,10 @@ public class Grille {
 		}
 	}
 	
+	/**
+	 * @param position
+	 * @return Vrai si l'on peut tirer sur la position
+	 */
 	public boolean tirer(Position position){
 		this.cases[position.getX()][position.getY()].peutEtreVisee();
 		return true;
