@@ -11,6 +11,9 @@ public class Case {
 	 */
 	private Position coordonnees;
 
+	/**
+	 * Permet de savoir si une case a déjà été ciblée par un tir.
+	 */
 	private boolean caseDejaCiblee;
 
 	/**
@@ -36,13 +39,13 @@ public class Case {
 		return true;
 	}
 
-	public String toString(){
+	public String toString() {
 		if (this.caseDejaCiblee) {
 			return "x";
 		}
-		for (int ligne = 0; ligne < Grille.NOMBRE_DE_CASES_X; ligne++){
-			for (int colonne = 0; colonne < Grille.NOMBRE_DE_CASES_Y; colonne ++){
-				
+		for (int ligne = 0; ligne < Grille.NOMBRE_DE_CASES_X; ligne++) {
+			for (int colonne = 0; colonne < Grille.NOMBRE_DE_CASES_Y; colonne++) {
+
 			}
 		}
 		return "o";
