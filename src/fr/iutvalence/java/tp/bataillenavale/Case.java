@@ -7,11 +7,6 @@ package fr.iutvalence.java.tp.bataillenavale;
 public class Case {
 
 	/**
-	 * Position de la case sur la grille.
-	 */
-	private Position coordonnees;
-
-	/**
 	 * Permet de savoir si une case a déjà été ciblée par un tir.
 	 */
 	private boolean caseDejaCiblee;
@@ -23,12 +18,11 @@ public class Case {
 	 *            Coordonnées de la case.
 	 */
 	public Case(Position position) {
-		this.coordonnees = position;
 		this.caseDejaCiblee = false;
 	}
 
 	/**
-	 * Indique siil est possible de tirer sur la case visée.
+	 * Indique si il est possible de tirer sur la case visée.
 	 * 
 	 * @return Vrai si la case n'a jamais été ciblée, faux sinon.
 	 */
