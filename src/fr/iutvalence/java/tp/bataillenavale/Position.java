@@ -6,7 +6,14 @@ package fr.iutvalence.java.tp.bataillenavale;
  */
 public class Position {
 
+	/**
+	 * Coordonnée verticale sur la grille.
+	 */
 	private int x;
+	
+	/**
+	 * Coordonnée horizontale sur la grille.
+	 */
 	private int y;
 
 	/**
