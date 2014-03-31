@@ -11,9 +11,10 @@ public class Bateau {
 	 */
 	private int taille;
 
+	/**
+	 * Represente les positions du bateau, vaut vrai si la case est touchée.
+	 */
 	private boolean[] positionsTouchees;
-
-	private int caseRestante;
 
 	/**
 	 * Orientation du bateau.
@@ -44,10 +45,12 @@ public class Bateau {
 	public Bateau(TypeBateau type, Position positionProue,
 			Orientation orientation) {
 		this.type = type;
-		this.caseRestante = this.type.getTaille();
 		this.positionProue = positionProue;
 		this.orientation = orientation;
 		this.taille = this.type.getTaille();
+
+		for (int positionCourante = 0; positionCourante < this.taille; positionCourante++)
+			this.positionsTouchees[positionCourante] = false;
 	}
 
 	/**
@@ -79,9 +82,9 @@ public class Bateau {
 		} catch (ExceptionCoordonneesNonValides e) {
 			e.printStackTrace();
 		}
-		
+
 		indicePosition++;
-		
+
 		return positionCourante;
 
 	}
