@@ -72,18 +72,23 @@ public class Bateau {
 		return false;
 	}
 
+	/**
+	 * @param numeroPosition
+	 * @return La position de la case se trouvant au numéro de position donné en
+	 *         paramètre.
+	 */
 	private Position obtenirPosition(int numeroPosition) {
 
 		Position positionCourante = this.positionProue;
-		int indicePosition = 1;
-		try {
-			positionCourante = positionCourante.voisine(this.orientation);
+		int indicePosition;
 
-		} catch (ExceptionCoordonneesNonValides e) {
-			e.printStackTrace();
-		}
+		for (indicePosition = 1; indicePosition < numeroPosition; indicePosition++)
+			try {
+				positionCourante = positionCourante.voisine(this.orientation);
 
-		indicePosition++;
+			} catch (ExceptionCoordonneesNonValides e) {
+				e.printStackTrace();
+			}
 
 		return positionCourante;
 
