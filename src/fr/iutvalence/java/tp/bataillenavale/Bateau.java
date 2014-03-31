@@ -49,6 +49,7 @@ public class Bateau {
 		this.orientation = orientation;
 		this.taille = this.type.getTaille();
 
+		this.positionsTouchees = new boolean[this.taille];
 		for (int positionCourante = 0; positionCourante < this.taille; positionCourante++)
 			this.positionsTouchees[positionCourante] = false;
 	}
@@ -73,23 +74,29 @@ public class Bateau {
 	}
 
 	/**
+	 * @param position
+	 * @return
+	 */
+	public boolean occupePosition(Position position) {
+		for (int numeroPosition = 0; numeroPosition < this.taille; numeroPosition++)
+			if (this.obtenirPosition(numeroPosition).equals(position))
+				return true;
+		return false;
+	}
+
+	/**
 	 * @param numeroPosition
 	 * @return La position de la case se trouvant au numéro de position donné en
 	 *         paramètre.
 	 */
 	private Position obtenirPosition(int numeroPosition) {
 
+		if (numeroPosition >= this.taille)
+			return null;
 		Position positionCourante = this.positionProue;
-		int indicePosition;
 
-		for (indicePosition = 1; indicePosition < numeroPosition; indicePosition++)
-			try {
-				positionCourante = positionCourante.voisine(this.orientation);
-
-			} catch (ExceptionCoordonneesNonValides e) {
-				e.printStackTrace();
-			}
-
+		for (int indicePosition = 0; indicePosition < numeroPosition; indicePosition++)
+			positionCourante = positionCourante.voisine(this.orientation);
 		return positionCourante;
 
 	}
@@ -105,5 +112,17 @@ public class Bateau {
 			if (!(this.positionsTouchees[numeroPosition]))
 				return false;
 		return true;
+	}
+
+	public String toString() {
+
+		Position position = new Position(0,0);
+		for (int ligne = 0; ligne < Grille.NOMBRE_DE_CASES_X; ligne++) {
+			for (int colonne = 0; colonne < Grille.NOMBRE_DE_CASES_Y; colonne++) {
+				if (this.occupePosition(position) == true)
+					return "B";
+			}
+		}
+		return "o";
 	}
 }

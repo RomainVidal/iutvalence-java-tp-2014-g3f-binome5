@@ -9,40 +9,37 @@ public class Position {
 	/**
 	 * Coordonnée verticale sur la grille.
 	 */
-	private int x;
+	private int numeroDeColonne;
 	
 	/**
 	 * Coordonnée horizontale sur la grille.
 	 */
-	private int y;
+	private int numeroDeLigne;
 
 	/**
-	 * @param X
-	 * @param Y
-	 * @throws ExceptionCoordonneesNonValides
+	 * @param numeroDeLigne
+	 * @param y
 	 * 
 	 *             Créé un pointeur vers une position de case dans la grille.
 	 */
-	public Position(int X, int Y) throws ExceptionCoordonneesNonValides {
-		if (x < 0 || x > 10 || y < 0 || y > 10)
-			throw new ExceptionCoordonneesNonValides();
+	public Position(int numeroDeLigne, int numeroDeColonne) {
 
-		this.x = X;
-		this.y = Y;
+		this.numeroDeColonne = numeroDeLigne;
+		this.numeroDeLigne = numeroDeColonne;
 	}
 
 	/**
 	 * @return la valeur de la coordonnée x de la position.
 	 */
-	public int getX() {
-		return x;
+	public int obtenirNumeroDeColonne() {
+		return numeroDeColonne;
 	}
 
 	/**
 	 * @return la valeur de la coordonnée y de la position.
 	 */
-	public int getY() {
-		return y;
+	public int obtenirNumeroDeLigne() {
+		return numeroDeLigne;
 	}
 
 	/**
@@ -52,19 +49,19 @@ public class Position {
 	 * @param orientation
 	 *            Bateau orienté verticalement ou horizontalement.
 	 * @return Position voisine de la position courante.
-	 * @throws ExceptionCoordonneesNonValides
+	 * 
 	 */
 
 	public Position voisine(Orientation orientation)
-			throws ExceptionCoordonneesNonValides {
-		Position positionVoisine = new Position(this.x, this.y);
+		 {
+		Position positionVoisine = new Position(this.numeroDeColonne, this.numeroDeLigne);
 
 		if (orientation == Orientation.HORIZONTAL) {
-			positionVoisine.y += 1;
+			positionVoisine.numeroDeLigne += 1;
 		}
 
 		if (orientation == Orientation.VERTICAL) {
-			positionVoisine.x += 1;
+			positionVoisine.numeroDeColonne += 1;
 		}
 
 		return positionVoisine;
