@@ -2,32 +2,56 @@ package fr.iutvalence.java.tp.bataillenavale;
 
 /**
  * Un joueur qui a une grille ou il place ses bateaux.
- *
+ * 
  */
 public class Joueur {
-	
+
+	/**
+	 * Nombre de bateaux disponibles par défaut, pour chaque joueur.
+	 */
 	private static final int BATEAUX_PAR_JOUEUR = 5;
+
+	/**
+	 * Grille attribuée au joueur, elle permettra de noter les posision qu'il a
+	 * déjà ciblé.
+	 */
 	private Grille grille;
+
+	/**
+	 * Tableau permettant de stocker les bateaux attribués aux joueurs.
+	 */
 	private Bateau[] bateaux;
-	
+
 	/**
 	 * Un joueur qui posséde une grille et des bateau.
 	 */
-	public Joueur(){
+	public Joueur() {
 		this.grille = new Grille();
 		this.bateaux = new Bateau[BATEAUX_PAR_JOUEUR];
-		for (int i = 0; i < BATEAUX_PAR_JOUEUR; i++){
+		for (int i = 0; i < BATEAUX_PAR_JOUEUR; i++) {
 			this.bateaux[i] = null;
 		}
 	}
-	
-	public void placerBateau(TypeBateau typebateau, Position positionProue, Orientation orientation){
+
+	/**
+	 * Permet de placer les bateaux sur la grille en indiquant la position de sa
+	 * première case, son orientation et son type.
+	 * 
+	 * @param typebateau
+	 *            Type du bateau, défini par un nom et une taille.
+	 * @param positionProue
+	 *            Position de la première case du bateau.
+	 * @param orientation
+	 *            Orientation du bateau sur la grill : horizontal ou vertical.
+	 */
+	public void placerBateau(TypeBateau typebateau, Position positionProue,
+			Orientation orientation) {
 		Bateau bateau = new Bateau(typebateau, positionProue, orientation);
-		for (int debutTableau = 0; debutTableau < BATEAUX_PAR_JOUEUR; debutTableau++){
-			if (this.bateaux[debutTableau] == null){
+		for (int debutTableau = 0; debutTableau < BATEAUX_PAR_JOUEUR; debutTableau++) {
+			if (this.bateaux[debutTableau] == null) {
 				this.bateaux[debutTableau] = bateau;
 			}
 		}
 	}
-	
+
 }
