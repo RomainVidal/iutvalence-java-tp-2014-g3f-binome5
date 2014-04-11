@@ -66,4 +66,12 @@ public class Position {
 
 		return positionVoisine;
 	}
+	
+	public boolean equals(Position position) {
+		if (this.numeroDeLigne == position.numeroDeLigne)
+			if (this.numeroDeColonne == position.numeroDeColonne)
+				return true;
+		return false;
+		
+	}
 }

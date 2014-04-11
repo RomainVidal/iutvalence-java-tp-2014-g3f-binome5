@@ -17,7 +17,7 @@ public class Case {
 	 * @param position
 	 *            Coordonnées de la case.
 	 */
-	public Case(Position position) {
+	public Case() {
 		this.caseDejaCiblee = false;
 	}
 
@@ -33,15 +33,4 @@ public class Case {
 		return true;
 	}
 
-	public String toString() {
-		if (this.caseDejaCiblee) {
-			return "x";
-		}
-		for (int ligne = 0; ligne < Grille.NOMBRE_DE_CASES_X; ligne++) {
-			for (int colonne = 0; colonne < Grille.NOMBRE_DE_CASES_Y; colonne++) {
-
-			}
-		}
-		return "o";
-	}
 }

@@ -5,20 +5,25 @@ package fr.iutvalence.java.tp.bataillenavale;
  */
 public class BatailleNavale
 {
+	
+	/**
+	 * Joueur 1 il posséde une grille et des bateaux.
+	 */
+	public Joueur joueur1;
 
 	/**
-	 * Plateau de jeu comportant deux grilles identiques (une pour chaque
-	 * joueur), cachées du joueur adverse par un cache placé au milieu.
+	 * Joueur 2 il posséde une grille et des bateaux.
 	 */
-	public Plateau plateau;
-
+	public Joueur joueur2;
+	
 	/**
 	 * Créé et renvoie une nouvelle partie de bataille navale. Création du
 	 * plateau de jeu et des bateaux à placer.
 	 */
 	public BatailleNavale()
 	{
-		this.plateau = new Plateau();
+		this.joueur1 = new Joueur();
+		this.joueur2 = new Joueur();
 	}
 
 	/**

@@ -64,8 +64,7 @@ public class Bateau {
 	 *         n'y en a pas.
 	 * @throws ExceptionCoordonneesNonValides
 	 */
-	public boolean estTouche(Position positionTir)
-			throws ExceptionCoordonneesNonValides {
+	public boolean estTouche(Position positionTir) {
 
 		for (int numeroPosition = 0; numeroPosition < this.taille; numeroPosition++)
 			if (this.obtenirPosition(numeroPosition).equals(positionTir))
@@ -112,17 +111,5 @@ public class Bateau {
 			if (!(this.positionsTouchees[numeroPosition]))
 				return false;
 		return true;
-	}
-
-	public String toString() {
-
-		Position position = new Position(0,0);
-		for (int ligne = 0; ligne < Grille.NOMBRE_DE_CASES_X; ligne++) {
-			for (int colonne = 0; colonne < Grille.NOMBRE_DE_CASES_Y; colonne++) {
-				if (this.occupePosition(position) == true)
-					return "B";
-			}
-		}
-		return "o";
 	}
 }

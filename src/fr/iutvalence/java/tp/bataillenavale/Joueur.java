@@ -54,4 +54,28 @@ public class Joueur {
 		}
 	}
 
+	public boolean unBateauEstTouche(Position position) {
+		for (int bateauCourant = 0; bateauCourant < BATEAUX_PAR_JOUEUR; bateauCourant++) {
+			if (this.bateaux[bateauCourant].occupePosition(position) == true)
+				return true;
+		}
+		return false;
+	}
+
+	public String toString() {
+
+		String grille = "";
+
+		for (int ligne = 0; ligne < Grille.NOMBRE_DE_CASES_X; ligne++) {
+			for (int colonne = 0; colonne < Grille.NOMBRE_DE_CASES_Y; colonne++) {
+				if (unBateauEstTouche(new Position(ligne, colonne)))
+					grille += "B";
+				else
+					grille += "o";
+			}
+			grille += "\n";
+		}
+
+		return grille;
+	}
 }

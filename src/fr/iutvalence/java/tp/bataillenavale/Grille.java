@@ -27,37 +27,22 @@ public class Grille {
 	 * Grille de jeu initialisée en tant que carré de 10*10 cases vides.
 	 */
 	public Grille() {
-		Position positionCourante;
 		cases = new Case[NOMBRE_DE_CASES_X][NOMBRE_DE_CASES_Y];
 		for (int coordoneex = 0; coordoneex < NOMBRE_DE_CASES_X; coordoneex++) {
 			for (int coordoneey = 0; coordoneey < NOMBRE_DE_CASES_Y; coordoneey++) {
-				try {
-					positionCourante = new Position(coordoneex, coordoneey);
-					cases[coordoneex][coordoneey] = new Case(positionCourante);
-				} catch (ExceptionCoordonneesNonValides e) {
-					e.printStackTrace();
-				}
+				cases[coordoneex][coordoneey] = new Case();
 			}
 		}
 	}
-	
+
 	/**
 	 * @param position
 	 * @return Vrai si l'on peut tirer sur la position
 	 */
-	public boolean tirer(Position position){
-		this.cases[position.getX()][position.getY()].peutEtreVisee();
+	public boolean tirer(Position position) {
+		this.cases[position.obtenirNumeroDeColonne()][position
+				.obtenirNumeroDeLigne()].peutEtreVisee();
 		return true;
 	}
-	
-	public String toString() {
-		String grille = "";
-		for (int ligne=0; ligne < NOMBRE_DE_CASES_X; ligne++){
-			for (int colonne = 0; colonne < NOMBRE_DE_CASES_Y; colonne++){
-				grille += this.cases[ligne][colonne].toString();
-			}
-			grille += "\n";
-		}
-		return grille;
-	}
+
 }
