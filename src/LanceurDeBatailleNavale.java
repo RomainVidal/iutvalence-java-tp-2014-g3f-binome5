@@ -30,6 +30,8 @@ public class LanceurDeBatailleNavale {
 		partieBatailleNavale.joueur1.placerBateau(TypeBateau.CROISEUR,
 				position, Orientation.HORIZONTAL);
 
+		partieBatailleNavale.joueur1.tirer(position);
+		
 		System.out.println(partieBatailleNavale.joueur1.toString());
 
 		System.out.println("Démarrage de la partie");

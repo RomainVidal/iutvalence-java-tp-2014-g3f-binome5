@@ -54,11 +54,23 @@ public class Joueur {
 		}
 	}
 
+	/**
+	 * Si un bateau appartenant au joueur est touché.
+	 * 
+	 * @param position
+	 *            La position qui va être tester
+	 * @return Vrai si un des bateaux du joueur se trouve sur la position
+	 *         entré en paramètre, faux sinon.
+	 */
 	public boolean unBateauEstTouche(Position position) {
 		for (int bateauCourant = 0; bateauCourant < BATEAUX_PAR_JOUEUR; bateauCourant++) {
 			if (this.bateaux[bateauCourant].occupePosition(position) == true)
 				return true;
 		}
+		return false;
+	}
+
+	public boolean tirer(Position position) {
 		return false;
 	}
 
