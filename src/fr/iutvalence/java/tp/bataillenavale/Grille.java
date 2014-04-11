@@ -36,12 +36,14 @@ public class Grille {
 	}
 
 	/**
+	 * La grille est visée par un joueur.
+	 * 
 	 * @param position
-	 * @return Vrai si l'on peut tirer sur la position
+	 *            la position qui est visée
+	 * @return Vrai le tir à réussi a toucher un bateau.
 	 */
-	public boolean tirer(Position position) {
-		this.cases[position.obtenirNumeroDeColonne()][position
-				.obtenirNumeroDeLigne()].peutEtreVisee();
+	public boolean subitUnTir(Position position) {
+		this.cases[position.obtenirNumeroDeLigne()][position.obtenirNumeroDeLigne()].estVisee();
 		return true;
 	}
 

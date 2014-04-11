@@ -32,5 +32,10 @@ public class Case {
 		this.caseDejaCiblee = true;
 		return true;
 	}
+	
+	//TODO Javadoc
+	public void estVisee(){
+		this.caseDejaCiblee = true;
+	}
 
 }

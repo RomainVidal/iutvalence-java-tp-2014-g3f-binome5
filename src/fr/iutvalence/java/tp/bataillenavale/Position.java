@@ -10,17 +10,19 @@ public class Position {
 	 * Coordonnée verticale sur la grille.
 	 */
 	private int numeroDeColonne;
-	
+
 	/**
 	 * Coordonnée horizontale sur la grille.
 	 */
 	private int numeroDeLigne;
 
 	/**
-	 * @param numeroDeLigne
-	 * @param y
+	 * Créé un pointeur vers une position de case dans la grille.
 	 * 
-	 *             Créé un pointeur vers une position de case dans la grille.
+	 * @param numeroDeLigne
+	 *            le numero de ligne de la position.
+	 * @param numeroDeColonne
+	 *            le numero de colonne de la position.
 	 */
 	public Position(int numeroDeLigne, int numeroDeColonne) {
 
@@ -52,9 +54,9 @@ public class Position {
 	 * 
 	 */
 
-	public Position voisine(Orientation orientation)
-		 {
-		Position positionVoisine = new Position(this.numeroDeColonne, this.numeroDeLigne);
+	public Position voisine(Orientation orientation) {
+		Position positionVoisine = new Position(this.numeroDeColonne,
+				this.numeroDeLigne);
 
 		if (orientation == Orientation.HORIZONTAL) {
 			positionVoisine.numeroDeLigne += 1;
@@ -66,12 +68,12 @@ public class Position {
 
 		return positionVoisine;
 	}
-	
+
 	public boolean equals(Position position) {
 		if (this.numeroDeLigne == position.numeroDeLigne)
 			if (this.numeroDeColonne == position.numeroDeColonne)
 				return true;
 		return false;
-		
+
 	}
 }

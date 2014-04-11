@@ -73,8 +73,11 @@ public class Bateau {
 	}
 
 	/**
+	 * Pour savoir si le bateau occupe une position.
+	 * 
 	 * @param position
-	 * @return
+	 *            la position ou l'on souhaite savoir si il y à un bateau.
+	 * @return vrai si le bateau occupe la position rentré en paramètre.
 	 */
 	public boolean occupePosition(Position position) {
 		for (int numeroPosition = 0; numeroPosition < this.taille; numeroPosition++)
@@ -84,7 +87,10 @@ public class Bateau {
 	}
 
 	/**
+	 * Obtenirles position du bateau à partir de la proue.
+	 * 
 	 * @param numeroPosition
+	 *            le numéro de la position du bateau.
 	 * @return La position de la case se trouvant au numéro de position donné en
 	 *         paramètre.
 	 */

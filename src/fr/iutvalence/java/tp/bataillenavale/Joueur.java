@@ -55,12 +55,24 @@ public class Joueur {
 	}
 
 	/**
+	 * Le joueur tir sur la grille.
+	 * 
+	 * @param position
+	 *            La position sur laquel on tire.
+	 * @return Vrai si on a touché un bateau, faux sinon.
+	 */
+	// TODO A finir...
+	public boolean tirer(Position position) {
+		return false;
+	}
+
+	/**
 	 * Si un bateau appartenant au joueur est touché.
 	 * 
 	 * @param position
 	 *            La position qui va être tester
-	 * @return Vrai si un des bateaux du joueur se trouve sur la position
-	 *         entré en paramètre, faux sinon.
+	 * @return Vrai si un des bateaux du joueur se trouve sur la position entré
+	 *         en paramètre, faux sinon.
 	 */
 	public boolean unBateauEstTouche(Position position) {
 		for (int bateauCourant = 0; bateauCourant < BATEAUX_PAR_JOUEUR; bateauCourant++) {
@@ -70,8 +82,13 @@ public class Joueur {
 		return false;
 	}
 
-	public boolean tirer(Position position) {
-		return false;
+	/**
+	 * Obtenir les bateaux d'un joueur
+	 * 
+	 * @return les bateaux du joueur.
+	 */
+	public Bateau[] obtenirBateau() {
+		return this.bateaux;
 	}
 
 	public String toString() {
