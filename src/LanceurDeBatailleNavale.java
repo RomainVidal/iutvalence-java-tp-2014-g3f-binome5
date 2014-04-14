@@ -1,7 +1,4 @@
 import fr.iutvalence.java.tp.bataillenavale.BatailleNavale;
-import fr.iutvalence.java.tp.bataillenavale.Orientation;
-import fr.iutvalence.java.tp.bataillenavale.Position;
-import fr.iutvalence.java.tp.bataillenavale.TypeBateau;
 
 /**
  * Ceci est une application permettant de lancer et de jouer une partie de
@@ -18,25 +15,19 @@ public class LanceurDeBatailleNavale {
 	 */
 	public static void main(String[] args) {
 
-		System.out.println("Création d'une partie de Bataille Navale");
+		System.out.println("Création d'une partie de Bataille Navale \n");
 
 		BatailleNavale partieBatailleNavale = new BatailleNavale();
 
-		Position position = new Position(5, 2);
-		partieBatailleNavale.joueur1.placerBateau(TypeBateau.TORPILLEUR,
-				position, Orientation.HORIZONTAL);
-
-		position = new Position(2, 3);
-		partieBatailleNavale.joueur1.placerBateau(TypeBateau.CROISEUR,
-				position, Orientation.HORIZONTAL);
-
-		partieBatailleNavale.joueur1.tirer(position);
-		
-		System.out.println(partieBatailleNavale.joueur1.toString());
-
-		System.out.println("Démarrage de la partie");
+		System.out.println("Démarrage de la partie \n");
 
 		partieBatailleNavale.jouer();
+
+		System.out.println("Grille de Joueur1 \n");
+		System.out.println(partieBatailleNavale.joueur1.toString());
+
+		System.out.println("Grille de Joueur2 \n");
+		System.out.println(partieBatailleNavale.joueur2.toString());
 
 		System.out.println("Fin de la partie");
 

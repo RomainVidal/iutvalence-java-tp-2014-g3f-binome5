@@ -69,6 +69,13 @@ public class Position {
 		return positionVoisine;
 	}
 
+	/**
+	 * Compare deux positions.
+	 * 
+	 * @param position
+	 *            la position à comparer à la position actuelle.
+	 * @return Vrai si les positions sont égales, faux sinon.
+	 */
 	public boolean equals(Position position) {
 		if (this.numeroDeLigne == position.numeroDeLigne)
 			if (this.numeroDeColonne == position.numeroDeColonne)

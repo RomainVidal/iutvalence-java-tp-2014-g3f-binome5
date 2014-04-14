@@ -13,12 +13,9 @@ public class Case {
 
 	/**
 	 * Définition d'une case selon ses coordonnées.
-	 * 
-	 * @param position
-	 *            Coordonnées de la case.
 	 */
 	public Case() {
-		this.caseDejaCiblee = false;
+	this.caseDejaCiblee = false;
 	}
 
 	/**
@@ -29,12 +26,13 @@ public class Case {
 	public boolean peutEtreVisee() {
 		if (this.caseDejaCiblee == true)
 			return false;
-		this.caseDejaCiblee = true;
 		return true;
 	}
-	
-	//TODO Javadoc
-	public void estVisee(){
+
+	/**
+	 * On tire sur la case choisie.
+	 */
+	public void estVisee() {
 		this.caseDejaCiblee = true;
 	}
 

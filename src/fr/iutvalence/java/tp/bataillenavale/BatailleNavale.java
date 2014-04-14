@@ -3,9 +3,8 @@ package fr.iutvalence.java.tp.bataillenavale;
 /**
  * Représente une partie de Bataille Navale.
  */
-public class BatailleNavale
-{
-	
+public class BatailleNavale {
+
 	/**
 	 * Joueur 1 il posséde une grille et des bateaux.
 	 */
@@ -15,13 +14,12 @@ public class BatailleNavale
 	 * Joueur 2 il posséde une grille et des bateaux.
 	 */
 	public Joueur joueur2;
-	
+
 	/**
 	 * Créé et renvoie une nouvelle partie de bataille navale. Création du
 	 * plateau de jeu et des bateaux à placer.
 	 */
-	public BatailleNavale()
-	{
+	public BatailleNavale() {
 		this.joueur1 = new Joueur();
 		this.joueur2 = new Joueur();
 	}
@@ -31,8 +29,12 @@ public class BatailleNavale
 	 * terminera par la victoire de l'un des deux joueurs. Pour l'instant elle
 	 * simule une partie vide.
 	 */
-	public void jouer()
-	{
+	public void jouer() {
+		System.out.println("Joueur1 placez bateaux \n");
+		joueur1.placerTousLesBateaux();
+
+		System.out.println("Joueur2 placez bateaux \n");
+		joueur2.placerTousLesBateaux();
 
 	}
 

@@ -40,11 +40,22 @@ public class Grille {
 	 * 
 	 * @param position
 	 *            la position qui est visée
-	 * @return Vrai le tir à réussi a toucher un bateau.
+	 * @return Vrai le tir à réussi a toucher une case.
 	 */
 	public boolean subitUnTir(Position position) {
-		this.cases[position.obtenirNumeroDeLigne()][position.obtenirNumeroDeLigne()].estVisee();
+		this.cases[position.obtenirNumeroDeLigne()][position
+				.obtenirNumeroDeLigne()].estVisee();
 		return true;
+	}
+
+	/**
+	 * @param position
+	 *            La position de la case.
+	 * @return Vrai si la case peut être visée.
+	 */
+	public boolean obtenirEtatCase(Position position) {
+		return this.cases[position.obtenirNumeroDeLigne()][position
+				.obtenirNumeroDeColonne()].peutEtreVisee();
 	}
 
 }

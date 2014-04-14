@@ -62,13 +62,14 @@ public class Bateau {
 	 *            Position de la case visée par le tir.
 	 * @return Vrai si un bateau se trouve à la position ciblée et faux si il
 	 *         n'y en a pas.
-	 * @throws ExceptionCoordonneesNonValides
 	 */
 	public boolean estTouche(Position positionTir) {
 
 		for (int numeroPosition = 0; numeroPosition < this.taille; numeroPosition++)
-			if (this.obtenirPosition(numeroPosition).equals(positionTir))
+			if (this.obtenirPosition(numeroPosition).equals(positionTir)) {
+				this.positionsTouchees[numeroPosition] = true;
 				return true;
+			}
 		return false;
 	}
 
@@ -76,7 +77,7 @@ public class Bateau {
 	 * Pour savoir si le bateau occupe une position.
 	 * 
 	 * @param position
-	 *            la position ou l'on souhaite savoir si il y à un bateau.
+	 *            la position ou l'on souhaite savoir si il y a un bateau.
 	 * @return vrai si le bateau occupe la position rentré en paramètre.
 	 */
 	public boolean occupePosition(Position position) {
